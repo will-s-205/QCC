@@ -4,7 +4,7 @@ import java.util.HashMap;
 
 public class Anagram2 {
     public boolean isAnagram(String s, String t) {
-        HashMap<Character,Integer> map=new HashMap();
+        HashMap<Character,Integer> map=new HashMap<Character,Integer>();
         int sl=s.length();
         int tl=t.length();
         if(sl!=tl){return false;}
