@@ -21,5 +21,5 @@ public class Anagram3 {
     	String two = "dowswin";
     	System.out.print(new Anagram2().isAnagram(one, two));
     }
-    
+
 }
