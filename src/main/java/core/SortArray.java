@@ -3,13 +3,17 @@ package core;
 public class SortArray {
 
     public static void main(String[] args) {
-        int[] numbers = { 64, 34, 25, 12, 22, 11, 90, 122, 255, 399, 444, 567, 600 };
+        int[] numbers = { 567, 64, 34, 25, 12, 600, 22, 11, 90, 122, 255, 399, 444 };
         bubbleSort(numbers);
         for (int num : numbers) {
             System.out.print(num + " ");
         }
     }
 
+    // Bubble Sort
+    // This is a simple comparison-based algorithm where array is iterated over
+    // multiple times, and adjacent elements are swapped if they are in the wrong
+    // order.
     public static void bubbleSort(int arr[]) {
         // Let's have a double for loop
         // The outer loop represents the number of times we will have to iterate
