@@ -1,3 +1,6 @@
+// T:O(n+m) - colomns+rows or O(n2)
+// S:O(n) - store only found values
+
 package core;
 
 import java.util.*;
