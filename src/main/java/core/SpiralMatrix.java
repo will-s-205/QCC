@@ -11,56 +11,54 @@ import java.util.List;
 // the matrix.
 public class SpiralMatrix {
     public List<Integer> spiralOrder(int[][] matrix) {
-        // Let's create a list to store the result
+        // Create a list to store the result
         List<Integer> result = new ArrayList<Integer>();
-        // Let's check if the matrix is empty
-        if(matrix.length == 0 || matrix[0].length == 0) return result;
         
-        // Let's create 4 variables to represent the 4 edges of the matrix
+        // Create 4 variables to represent the 4 edges of the matrix
         int top = 0;
         int bottom = matrix.length-1;
         int left = 0;
         int right = matrix[0].length-1;
         
-        // Let's use a while loop to keep doing this until we have reached the center of the matrix
+        // Use a while loop to keep doing this until we have reached the center of the matrix
         while(true){
-            // Let's add the top edge to the result list and increment top by 1 to move to the next edge of the matrix
+            // Add the top edge to the result list and increment top by 1 to move to the next edge of the matrix
             for(int i = left; i <= right; i++) result.add(matrix[top][i]);
             top++;
             if(left > right || top > bottom) break;
             
-            // Let's add the right edge to the result list and decrement right by 1 to move to the next edge of the matrix
+            // Add the right edge to the result list and decrement right by 1 to move to the next edge of the matrix
             for(int i = top; i <= bottom; i++) result.add(matrix[i][right]);
             right--;
             if(left > right || top > bottom) break;
             
-            // Let's add the bottom edge to the result list and decrement bottom by 1 to move to the next edge of the matrix
+            // Add the bottom edge to the result list and decrement bottom by 1 to move to the next edge of the matrix
             for(int i = right; i >= left; i--) result.add(matrix[bottom][i]);
             bottom--;
             if(left > right || top > bottom) break;
             
-            // Let's add the left edge to the result list and increment left by 1 to move to the next edge of the matrix
+            // Add the left edge to the result list and increment left by 1 to move to the next edge of the matrix
             for(int i = bottom; i >= top; i--) result.add(matrix[i][left]);
             left++;
             if(left > right || top > bottom) break;
         }
         
-        // Let's return the result list containing the elements of the matrix in a spiral order
+        // Return the result list containing the elements of the matrix in a spiral order
         return result;
     }
 
-    // Let's test the above function with a sample matrix and print the result list to the console output window 
+    // Test the above function with a sample matrix and print the result list to the console output window 
     public static void main(String[] args) {
-        // Let's create a sample matrix to test the above function
+        // Create a sample matrix to test the above function
         int[][] matrix = { { 1, 2, 3, 4 }, 
                            { 5, 6, 7, 8 }, 
                            { 9, 10, 11, 12 }, 
                            { 13, 14, 15, 16 } };
-        // Let's create an instance of the above class and call the above function to get the elements of the matrix in a spiral order
+        // Create an instance of the above class and call the above function to get the elements of the matrix in a spiral order
         SpiralMatrix sm = new SpiralMatrix();
-        // Let's store the result in a list and print it to the console output window 
+        // Store the result in a list and print it to the console output window 
         List<Integer> res = sm.spiralOrder(matrix);
-        // Let's print the result list to the console output window 
+        // Print the result list to the console output window 
         for (int num : res) {
             System.out.print(num + " ");
         }
